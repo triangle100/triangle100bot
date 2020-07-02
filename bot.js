@@ -44,7 +44,7 @@ if (cmd === prefix + "help"){
 	let HelpEmbed = new Discord.RichEmbed()
    .setTitle('Help Menu - Commands')
    .setDescription('\n `ee!help` (a list of commands) \n `ee!wallet` (shows your current wealth) \n `ee!work` (work for your job) \n `ee!jobs` (a list of the jobs you can apply for) \n `ee!slots` (use the slots machine) \n `ee!daily` (claim your daily reward) \n `ee!premium` (support Economee)')
-   .setColor('#0099ff')
+   .setColor('#f0eb62')
    .setTimestamp()
    .setFooter(footer);
 
@@ -68,7 +68,7 @@ if (cmd === prefix + "work"){
 	    let totalEmbed = new Discord.RichEmbed()
 	    .setFooter(footer)
 	    .setTitle("Pay Check!")
-		.setColor('#0099ff')
+		.setColor('#f0eb62')
 		.addField("Job:", uJob)
 	    .addField("You finished some work and got paid!", "Paycheck: " + totalAmt)
 	    message.channel.send(totalEmbed)
@@ -89,7 +89,7 @@ if (cmd === prefix + "work"){
 	    let totalEmbed = new Discord.RichEmbed()
 	    .setFooter(footer)
 	    .setTitle("Pay Check!")
-		.setColor('#0099ff')
+		.setColor('#f0eb62')
 		.addField("Job:", uJob)
 	    .addField("You finished some work and got paid!", "Paycheck: " + totalAmt)
 	    message.channel.send(totalEmbed)
@@ -110,7 +110,7 @@ if (cmd === prefix + "work"){
 	    let totalEmbed = new Discord.RichEmbed()
 	    .setFooter(footer)
 	    .setTitle("Pay Check!")
-		.setColor('#0099ff')
+		.setColor('#f0eb62')
 		.addField("Job:", uJob)
 	    .addField("You finished some work and got paid!", "Paycheck: " + totalAmt)
 	    message.channel.send(totalEmbed)
@@ -174,7 +174,7 @@ if (cmd === prefix + "jobs"){
 	let jobsA = new Discord.RichEmbed()
 	.setFooter(footer)
 	.setTitle("Choose a job! Reply with name of the job!")
-	.setColor('#0099ff')
+	.setColor('#f0eb62')
 	.addField("**Jobs Available**", "`Cashier` \n `Assistant` \n `Programmer`")
 	message.channel.send(jobsA)
 	const response1 = await message.channel.awaitMessages(msg => msg.author === message.author, { time: 30000, max: 1, errors: ['time'] }).catch(error => message.channel.send('You took too long to choose.'))
@@ -256,7 +256,7 @@ if (cmd === prefix + "slots"){
                 .setFooter("You Won! + 500 Coins", aicon)
                 .setTitle(`:slot_machine: Slots :slot_machine:`)
                 .addField(`Result:`, slots[result1] + slots[result2] + slots[result3], true)
-                .setColor("#0099ff");
+                .setColor("#f0eb62");
 		coins[message.author.id] = {
         coins: coins[message.author.id].coins + 500
     };
@@ -269,7 +269,7 @@ if (cmd === prefix + "slots"){
                 .setFooter(`You Lost! - 200 coins`, aicon)
                 .setTitle(`:slot_machine: Slots :slot_machine:`)
                 .addField(`Result`, slots[result1] + slots[result2] + slots[result3], true)
-                .setColor("#0099ff");
+                .setColor("#f0eb62");
 		coins[message.author.id] = {
         coins: coins[message.author.id].coins - 50
     };
@@ -290,7 +290,7 @@ if (cmd === prefix + "wallet"){
 	let uCoins = coins[message.author.id].coins;
 	let uCoinsEmbed = new Discord.RichEmbed()
    .addField(message.author.username + "'s Wallet",`${uCoins} Coins`)
-   .setColor('#0099ff')
+   .setColor('#f0eb62')
    .setTimestamp()
    .setFooter(footer);
 
