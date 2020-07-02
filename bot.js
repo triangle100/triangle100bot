@@ -1,9 +1,9 @@
 require('console-stamp')(console, '[HH:MM:ss]');
 let servername = "Economee Support"
-let prefix = "eea!"
-let botname = "Economee ALPHA"
+let prefix = "eed!"
+let botname = "Economee DEV"
 let W_message = true
-let Bot_A = "eea!help"
+let Bot_A = "eed!help"
 let Bot_Version = "v0.1.26"
 let cooldown = 86400000
 let Dcoins = 500
