@@ -4,7 +4,7 @@ let prefix = "eea!"
 let botname = "Economee ALPHA"
 let W_message = true
 let Bot_A = "eea!help"
-let Bot_Version = "v0.2.0.9"
+let Bot_Version = "v0.2.0.8"
 let cooldown = 86400000
 let Dcoins = 500
 let wCooldown = 3600000
@@ -42,7 +42,6 @@ bot.on("message", async message => {
 if (cmd === prefix + "time"){	
 	let TimeEmbed = new Discord.RichEmbed()
    .setTimestamp()
-   .setTitle(Timestamp)
    .setColor('#f0eb62')
 
 	message.channel.send(TimeEmbed)
