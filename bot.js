@@ -4,7 +4,7 @@ let prefix = "eea!"
 let botname = "Economee ALPHA"
 let W_message = true
 let Bot_A = "eea!help"
-let Bot_Version = "v0.2.0.11"
+let Bot_Version = "v0.2.0.13"
 let cooldown = 86400000
 let Dcoins = 500
 let wCooldown = 3600000
@@ -58,7 +58,8 @@ if (cmd === prefix + "version"){
 if (cmd === prefix + "help"){	
 	let HelpEmbed = new Discord.RichEmbed()
    .setTitle('Help Menu - Commands')
-   .setDescription('Default prefix:`$`')
+   .setDescription('Default prefix: `$`')
+   .addField("Default", "\n `eea!help` (a list of commands) \n `eea!time` (prints time) \n `eea!wallet` (shows your current wealth) \n `eea!work` (work for your job) \n `eea!jobs` (a list of the jobs you can apply for) \n `eea!slots` (use the slots machine) \n `eea!daily` (claim your daily reward) \n `eea!premium` (support Economee)", false)
    .setColor('#f0eb62')
    .setTimestamp()
    .setFooter(footer);
