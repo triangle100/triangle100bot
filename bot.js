@@ -60,7 +60,7 @@ if (cmd === prefix + "help"){
    .setTitle('Help Menu - Commands')
    .setDescription("Prefix: `" + prefix + "`")
    .addField("General", "\n `help` (a list of commands) \n `wallet` (shows your current wealth) \n `work` (work for your job) \n `jobs` (a list of the jobs you can apply for) \n `slots` (use the slots machine) \n `daily` (claim your daily reward)", false)
-   .addField("Misc", "\n `version` (prints current build version) \n `time` (prints current time) \n `premium` (💎support Economee and get extra perks!💎)", true)
+   .addField("Misc", "\n `version` (prints current build version) \n `time` (prints current time) \n `premium` (💎extra perks!💎)", true)
    .setColor('#f0eb62')
    .setTimestamp()
    .setFooter(footer);
