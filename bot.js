@@ -4,7 +4,7 @@ let prefix = "eea!"
 let botname = "Economee ALPHA"
 let W_message = true
 let Bot_A = "eea!help"
-let Bot_Version = "v0.2.0.14"
+let Bot_Version = "v0.2.0.15"
 let cooldown = 86400000
 let Dcoins = 500
 let wCooldown = 3600000
@@ -60,7 +60,7 @@ if (cmd === prefix + "help"){
    .setTitle('Help Menu - Commands')
    .setDescription('Default prefix: `$`')
    .addField("General", "\n `eea!help` (a list of commands) \n `eea!wallet` (shows your current wealth) \n `eea!work` (work for your job) \n `eea!jobs` (a list of the jobs you can apply for) \n `eea!slots` (use the slots machine) \n `eea!daily` (claim your daily reward)", false)
-   .addField("Misc", "\n `eea!version` (prints current build version) \n `eea!time` (prints current time) \n `eea!premium` (support Economee)", true)
+   .addField("Misc", "\n `eea!version` (prints current build version) \n `eea!time` (prints current time) \n `eea!premium` (💎support Economee and get extra perks!💎)", true)
    .setColor('#f0eb62')
    .setTimestamp()
    .setFooter(footer);
