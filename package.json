@@ -1,0 +1,24 @@
+{
+  "name": "economeejs",
+  "version": "1.0.0",
+  "description": "basic economy bot",
+  "main": "bot.js",
+  "dependencies": {
+    "console-stamp": "^0.2.9",
+    "discord.js": "^11.3.2",
+    "google": "^2.1.0",
+    "moment": "^2.24.0",
+    "ms": "^2.1.1",
+    "opusscript": "0.0.6",
+    "simple-youtube-api": "^5.1.1",
+    "twitch-irc": "^1.2.7",
+    "ytdl-core": "^0.29.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node bot.js"
+  },
+  "author": "ZaneShaw",
+  "license": "MIT"
+}
