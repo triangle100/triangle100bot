@@ -59,7 +59,7 @@ if (cmd === prefix + "help"){
 	let HelpEmbed = new Discord.RichEmbed()
    .setTitle('Help Menu - Commands')
    .setDescription('Default prefix: `$`')
-   .addField("General", "\n `eea!help` (a list of commands) \n `eea!wallet` (shows your current wealth) \n `eea!work` (work for your job) \n `eea!jobs` (a list of the jobs you can apply for) \n `eea!slots` (use the slots machine) \n `eea!daily` (claim your daily reward), false)
+   .addField("General", "\n `eea!help` (a list of commands) \n `eea!wallet` (shows your current wealth) \n `eea!work` (work for your job) \n `eea!jobs` (a list of the jobs you can apply for) \n `eea!slots` (use the slots machine) \n `eea!daily` (claim your daily reward)", false)
    .addField("Misc", "\n `eea!version` (prints current build version) \n `eea!time` (prints current time) \n `eea!premium` (support Economee)", true)
    .setColor('#f0eb62')
    .setTimestamp()
