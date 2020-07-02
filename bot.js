@@ -4,7 +4,7 @@ let prefix = "eea!"
 let botname = "Economee ALPHA"
 let W_message = true
 let Bot_A = "eea!help"
-let Bot_Version = "v0.2.0.7"
+let Bot_Version = "v0.2.0.8"
 let cooldown = 86400000
 let Dcoins = 500
 let wCooldown = 3600000
@@ -45,6 +45,14 @@ if (cmd === prefix + "time"){
    .setColor('#f0eb62')
 
 	message.channel.send(TimeEmbed)
+}
+	
+if (cmd === prefix + "version"){	
+	let VersionEmbed = new Discord.RichEmbed()
+   .setTitle(Bot_Version)
+   .setColor('#f0eb62')
+
+	message.channel.send(VersionEmbed)
 }
 
 if (cmd === prefix + "help"){	
