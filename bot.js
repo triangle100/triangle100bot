@@ -327,4 +327,4 @@ let baseAmt = Math.floor(Math.random() * 1) + 1;
 
 });
 
-bot.login(process.env.KEY);
+bot.login(process.env.TOKEN);
