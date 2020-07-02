@@ -58,7 +58,7 @@ if (cmd === prefix + "version"){
 if (cmd === prefix + "help"){	
 	let HelpEmbed = new Discord.RichEmbed()
    .setTitle('Help Menu - Commands')
-   .setDescription(prefix)
+   .setDescription("Prefix: " + prefix)
    .addField("General", "\n `eea!help` (a list of commands) \n `eea!wallet` (shows your current wealth) \n `eea!work` (work for your job) \n `eea!jobs` (a list of the jobs you can apply for) \n `eea!slots` (use the slots machine) \n `eea!daily` (claim your daily reward)", false)
    .addField("Misc", "\n `eea!version` (prints current build version) \n `eea!time` (prints current time) \n `eea!premium` (💎support Economee and get extra perks!💎)", true)
    .setColor('#f0eb62')
