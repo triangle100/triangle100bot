@@ -40,7 +40,7 @@ bot.on("message", async message => {
   let args = message.content.split(' ');
 
 if (cmd === prefix + "time"){	
-	let TimeEmbed = new RichEmbed()
+	let TimeEmbed = new Client.RichEmbed()
    .setTimestamp()
    .setColor('#d53e3e')
 
@@ -59,7 +59,7 @@ if (cmd === prefix + "attachment"){
 }
 	
 if (cmd === prefix + "version"){	
-	let VersionEmbed = new RichEmbed()
+	let VersionEmbed = new Client.RichEmbed()
    .setTitle(Bot_Version)
    .setColor('#d53e3e')
 
@@ -67,7 +67,7 @@ if (cmd === prefix + "version"){
 }
 
 if (cmd === prefix + "help"){	
-	let HelpEmbed = new RichEmbed()
+	let HelpEmbed = new Client.RichEmbed()
    .setTitle('Help Menu - Commands')
    .setDescription("Prefix: `" + prefix + "`")
    .addField("General", "\n `help` (a list of commands) \n `wallet` (shows your current wealth) \n `work` (work for your job) \n `jobs` (a list of the jobs you can apply for) \n `slots` (use the slots machine) \n `daily` (claim your daily reward)", false)
@@ -93,7 +93,7 @@ if (cmd === prefix + "work"){
 	else {
 	if (uJob === "programmer"){
         let totalAmt = Math.floor(Math.random() * (860 - 550)) + 550
-	    let totalEmbed = new RichEmbed()
+	    let totalEmbed = new Client.RichEmbed()
 	    .setFooter(footer)
 	    .setTitle("Pay Check!")
 		.setColor('#d53e3e')
@@ -114,7 +114,7 @@ if (cmd === prefix + "work"){
     }
 	if (uJob === "ssworker"){
 	    let totalAmt = Math.floor(Math.random() * (220 - 90)) + 90
-	    let totalEmbed = new RichEmbed()
+	    let totalEmbed = new Client.RichEmbed()
 	    .setFooter(footer)
 	    .setTitle("Pay Check!")
 		.setColor('#d53e3e')
@@ -135,7 +135,7 @@ if (cmd === prefix + "work"){
 	}
     if (uJob === "mechanic"){
 		let totalAmt = Math.floor(Math.random() * (300 - 110)) + 110
-	    let totalEmbed = new RichEmbed()
+	    let totalEmbed = new Client.RichEmbed()
 	    .setFooter(footer)
 	    .setTitle("Pay Check!")
 		.setColor('#d53e3e')
@@ -199,7 +199,7 @@ if (cmd === prefix + "jobs"){
     job: 0
    }
   }
-	let jobsA = new RichEmbed()
+	let jobsA = new Client.RichEmbed()
 	.setFooter(footer)
 	.setTitle("Choose a job! Reply with name of the job!")
 	.setColor('#d53e3e')
@@ -280,7 +280,7 @@ if (cmd === prefix + "slots"){
         let aicon = message.author.displayAvatarURL;
 
         if (slots[result1] === slots[result2] && slots[result3]) {
-            let wEmbed = new RichEmbed()
+            let wEmbed = new Client.RichEmbed()
                 .setFooter("You Won! + 500 Coins", aicon)
                 .setTitle(`:slot_machine: Slots :slot_machine:`)
                 .addField(`Result:`, slots[result1] + slots[result2] + slots[result3], true)
@@ -293,7 +293,7 @@ if (cmd === prefix + "slots"){
     });
             message.channel.send(wEmbed);
         } else {
-            let embed = new RichEmbed()
+            let embed = new Client.RichEmbed()
                 .setFooter(`You Lost! - 200 coins`, aicon)
                 .setTitle(`:slot_machine: Slots :slot_machine:`)
                 .addField(`Result`, slots[result1] + slots[result2] + slots[result3], true)
@@ -316,7 +316,7 @@ if (cmd === prefix + "wallet"){
 	};
 	}
 	let uCoins = coins[message.author.id].coins;
-	let uCoinsEmbed = new RichEmbed()
+	let uCoinsEmbed = new Client.RichEmbed()
    .addField(message.author.username + "'s Wallet",`${uCoins} Coins`)
    .setColor('#d53e3e')
    .setTimestamp()
