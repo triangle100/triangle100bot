@@ -14,13 +14,9 @@ const client = new Discord.Client();
 const member = new Discord.Client();
 const cmd = new Discord.Client();
 const message = new Discord.Client();
-<<<<<<< HEAD
 const tokenfile = require("process.env.token");
 const token = require("process.env.token");
 const bot = new Discord.Client({disableeaveryone: false});
-=======
-const bot = new Discord.Client({disableEveryone: false});
->>>>>>> parent of 86af147... Add files via upload
 const chat = new Discord.Client();
 const send = new Discord.Client();
 const createdAt = new Discord.Client();
