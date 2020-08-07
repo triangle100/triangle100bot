@@ -1,31 +1,26 @@
-//EcoBot by Billy :)
-//Any issues or questions please message me on discord PepeTheStar#8736
-
-
-//Make sure to edit the token in the token.json
-
-//Edit these values below
-
 require('console-stamp')(console, '[HH:MM:ss]');
-let servername = "Economee Support" // Your server name
-let prefix = "eea!" // Bot Prefix
-let botname = "Economee ALPHA" // Bot name
-let W_message = true // Set this to false if you do not want welcome messages
-let Bot_A = "eea!help" // Bot activity {Playing Something}
-let Bot_Version = "v0.1.0.0" // Bots version
-let cooldown = 86400000 // 86400000 = 24Hour. 60000 = 1 minute // This is the cooldown on the daily money
-let Dcoins = 500 // How many coins the user should get from !daily
-let wCooldown = 3600000 // How long should the work cooldown be ?
-//Do not edit anything below this unless you're aware of what you're doing.
+let servername = "Economee Support"
+let prefix = "++"
+let botname = "Economee DEV"
+let W_message = true
+let Bot_A = "++help"
+let Bot_Version = "v0.1.29"
+let cooldown = 86400000
+let Dcoins = 500
+let wCooldown = 3600000
 const consolestamp = require('console-stamp')(console, '[HH:MM:ss.l]');
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const member = new Discord.Client();
 const cmd = new Discord.Client();
 const message = new Discord.Client();
+<<<<<<< HEAD
 const tokenfile = require("process.env.token");
 const token = require("process.env.token");
 const bot = new Discord.Client({disableeaveryone: false});
+=======
+const bot = new Discord.Client({disableEveryone: false});
+>>>>>>> parent of 86af147... Add files via upload
 const chat = new Discord.Client();
 const send = new Discord.Client();
 const createdAt = new Discord.Client();
@@ -37,13 +32,9 @@ const coins = require("./coins.json")
 const coinCooldown = new Set()
 const job = require("./jobs.json")
 const workCooldown = new Set();
-if(token.token === "CHANGEME") return console.log("Set your token up! Go to https://www.discordapp.com/developers and generate a token from a bot user.");
-
-
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} Has started and loaded the commands! I am ready to go`)
-
   bot.user.setActivity(Bot_A);
 });
 
@@ -54,32 +45,38 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = message.content.split(' ');
 
+if (cmd === prefix + "time"){	
+	let TimeEmbed = new Discord.RichEmbed()
+   .setTimestamp()
+   .setColor('#d53e3e')
+
+	message.channel.send(TimeEmbed)
+}
+	
+if (cmd === prefix + "version"){	
+	let VersionEmbed = new Discord.RichEmbed()
+   .setTitle(Bot_Version)
+   .setColor('#d53e3e')
+
+	message.channel.send(VersionEmbed)
+}
 
 if (cmd === prefix + "help"){	
 	let HelpEmbed = new Discord.RichEmbed()
    .setTitle('Help Menu - Commands')
-   .setDescription('\n `eea!help` (a list of commands) \n `eea!wallet` (shows your current wealth) \n `eea!work` (work for your job) \n `eea!jobs` (a list of the jobs you can apply for) \n `eea!slots` (use the slots machine) \n `eea!daily` (claim your daily reward) \n `eea!premium` (support Economee)')
-   .setColor('#0099ff')
+   .setDescription("Prefix: `" + prefix + "`")
+   .addField("General", "\n `help` (a list of commands) \n `wallet` (shows your current wealth) \n `work` (work for your job) \n `jobs` (a list of the jobs you can apply for) \n `slots` (use the slots machine) \n `daily` (claim your daily reward)", false)
+   .addField("Miscellaneous", "\n `version` (prints current build version) \n `time` (prints current time) \n `premium` (💎extra perks!💎)", true)
+   .setColor('#d53e3e')
    .setTimestamp()
    .setFooter(footer);
 
 	message.channel.send(HelpEmbed)
 }
 
-if (cmd === prefix + "attachment"){	
-	let args = message.content.substring(PREFIX.length).split(" ");
-	
-	switch(args[0]){
-		case 'send':
-			const attachment = new Attachment('https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png')
-			message.channel.send(message.author, attachment);
-		break;
-	}
-}
-
 if (cmd === prefix + "premium"){	
 	message.channel.send("💎Support Economee and buy PREMIUM for extra commands and features!💎")
-	message.channel.send("https://www.patreon.com/Economee")
+	message.channel.send("https://www.patreon.com/economee")
 }
 
 //Work
@@ -94,7 +91,7 @@ if (cmd === prefix + "work"){
 	    let totalEmbed = new Discord.RichEmbed()
 	    .setFooter(footer)
 	    .setTitle("Pay Check!")
-		.setColor('#0099ff')
+		.setColor('#d53e3e')
 		.addField("Job:", uJob)
 	    .addField("You finished some work and got paid!", "Paycheck: " + totalAmt)
 	    message.channel.send(totalEmbed)
@@ -115,7 +112,7 @@ if (cmd === prefix + "work"){
 	    let totalEmbed = new Discord.RichEmbed()
 	    .setFooter(footer)
 	    .setTitle("Pay Check!")
-		.setColor('#0099ff')
+		.setColor('#d53e3e')
 		.addField("Job:", uJob)
 	    .addField("You finished some work and got paid!", "Paycheck: " + totalAmt)
 	    message.channel.send(totalEmbed)
@@ -136,7 +133,7 @@ if (cmd === prefix + "work"){
 	    let totalEmbed = new Discord.RichEmbed()
 	    .setFooter(footer)
 	    .setTitle("Pay Check!")
-		.setColor('#0099ff')
+		.setColor('#d53e3e')
 		.addField("Job:", uJob)
 	    .addField("You finished some work and got paid!", "Paycheck: " + totalAmt)
 	    message.channel.send(totalEmbed)
@@ -156,7 +153,7 @@ if (cmd === prefix + "work"){
 	
 	
 	
-	message.channel.send(":no_entry: It seeams that you don't have a job; Get one by doing !jobs")
+	message.channel.send(":no_entry: It seems that you don't have a job; Get one by doing !jobs")
 }
 }  
   
@@ -200,43 +197,43 @@ if (cmd === prefix + "jobs"){
 	let jobsA = new Discord.RichEmbed()
 	.setFooter(footer)
 	.setTitle("Choose a job! Reply with name of the job!")
-	.setColor('#0099ff')
-	.addField("**Jobs Available**", "`Superstore Worker` \n `Mechanic` \n `Programmer`")
+	.setColor('#d53e3e')
+	.addField("**Jobs Available**", "`Cashier` \n `Assistant` \n `Programmer`")
 	message.channel.send(jobsA)
 	const response1 = await message.channel.awaitMessages(msg => msg.author === message.author, { time: 30000, max: 1, errors: ['time'] }).catch(error => message.channel.send('You took too long to choose.'))
-    //Superstore worker
-	if (response1.first().content.toLowerCase() === "superstore worker"){
+    //Cashier
+	if (response1.first().content.toLowerCase() === "cashier"){
 		if(!job[message.author.id].job){
-		message.channel.send("You have beean hired as a superstore worker")
+		message.channel.send("You have been hired as a cashier")
         job[message.author.id] = {
-        job: job[message.author.id].job = "ssworker"
+        job: job[message.author.id].job = "cashier"
     };
        return fs.writeFile("./jobs.json", JSON.stringify(job), (err) => {
 		   return
     });
 	}
-	message.channel.send("You have quit your old job and now you're working as a superstore worker")
+	message.channel.send("You have quit your old job and now you're working as a cashier")
         job[message.author.id] = {
-        job: job[message.author.id].job = "ssworker"
+        job: job[message.author.id].job = "cashier"
     };
        return fs.writeFile("./jobs.json", JSON.stringify(job), (err) => {
 		   return
     });
 	}
-    //Mechanic worker
-	if (response1.first().content.toLowerCase() === "mechanic"){
+    //Assistant
+	if (response1.first().content.toLowerCase() === "assistant"){
 		if(!job[message.author.id].job){
-		message.channel.send("You have beean hired as a mechanic")
+		message.channel.send("You have been hired as an assistant")
         job[message.author.id] = {
-        job: job[message.author.id].job = "mechanic"
+        job: job[message.author.id].job = "assistant"
     };
        return fs.writeFile("./jobs.json", JSON.stringify(job), (err) => {
 		   return
     });
 	}
-	message.channel.send("You have quit your old job and now you're working as a mechanic")
+	message.channel.send("You have quit your old job and now you're working as an assistant")
         job[message.author.id] = {
-        job: job[message.author.id].job = "mechanic"
+        job: job[message.author.id].job = "assistant"
     };
        return fs.writeFile("./jobs.json", JSON.stringify(job), (err) => {
 		   return
@@ -245,7 +242,7 @@ if (cmd === prefix + "jobs"){
 	//Programmer
 	if (response1.first().content.toLowerCase() === "programmer"){
 		if(!job[message.author.id].job){
-		message.channel.send("Congratulations! You've beean hired to work at discord HQ; What an amazing job to have!")
+		message.channel.send("Congratulations! You've been hired to work at discord HQ; What an amazing job to have!")
         job[message.author.id] = {
         job: job[message.author.id].job = "programmer"
     };
@@ -253,7 +250,7 @@ if (cmd === prefix + "jobs"){
 		   return
     });
 	}
-	message.channel.send("Damn! That's a big step up from your old job. You've beean hired to work at discord HQ.")
+	message.channel.send("You've been hired to work at discord!")
         job[message.author.id] = {
         job: job[message.author.id].job = "programmer"
     };
@@ -282,7 +279,7 @@ if (cmd === prefix + "slots"){
                 .setFooter("You Won! + 500 Coins", aicon)
                 .setTitle(`:slot_machine: Slots :slot_machine:`)
                 .addField(`Result:`, slots[result1] + slots[result2] + slots[result3], true)
-                .setColor("#0099ff");
+                .setColor("#d53e3e");
 		coins[message.author.id] = {
         coins: coins[message.author.id].coins + 500
     };
@@ -295,16 +292,15 @@ if (cmd === prefix + "slots"){
                 .setFooter(`You Lost! - 200 coins`, aicon)
                 .setTitle(`:slot_machine: Slots :slot_machine:`)
                 .addField(`Result`, slots[result1] + slots[result2] + slots[result3], true)
-                .setColor("#0099ff");
+                .setColor("#d53e3e");
 		coins[message.author.id] = {
-        coins: coins[message.author.id].coins - 200
+        coins: coins[message.author.id].coins - 50
     };
         fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
         if (err) console.log(err)
     });
             message.channel.send(embed);
         }
-        message.delete()
 }
  //Wallet 
 if (cmd === prefix + "wallet"){
@@ -317,7 +313,7 @@ if (cmd === prefix + "wallet"){
 	let uCoins = coins[message.author.id].coins;
 	let uCoinsEmbed = new Discord.RichEmbed()
    .addField(message.author.username + "'s Wallet",`${uCoins} Coins`)
-   .setColor('#0099ff')
+   .setColor('#d53e3e')
    .setTimestamp()
    .setFooter(footer);
 
@@ -354,4 +350,4 @@ let baseAmt = Math.floor(Math.random() * 1) + 1;
 
 });
 
-bot.login(token.token);
+bot.login(process.env.TOKEN);
