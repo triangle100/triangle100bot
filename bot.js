@@ -38,7 +38,8 @@ bot.on("message", async message => {
   if(message.channel.type === "dm") return;
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
-  let args = message.content.split(' ');
+  let args = message.content.substring(prefix.length).split(" ");
+  const attachment = new Attachment('https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png')
 
 if (cmd === prefix + "time"){	
 	let TimeEmbed = new Discord.RichEmbed()
@@ -49,14 +50,7 @@ if (cmd === prefix + "time"){
 }
 	
 if (cmd === prefix + "attachment"){	
-	let args = message.content.substring(prefix.length).split(" ");
-	
-	switch(args[0]){
-		case 'send':
-			const attachment = new Attachment('https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png')
-			message.channel.send(message.author, attachment);
-		break;
-	}
+	message.channel.send(message.author, attachment);
 }
 	
 if (cmd === prefix + "version"){	
