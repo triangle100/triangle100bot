@@ -10,7 +10,6 @@ let Dcoins = 500
 let wCooldown = 3600000
 const consolestamp = require('console-stamp')(console, '[HH:MM:ss.l]');
 const {Client, Attachment} = require("discord.js");
-const bot = new Client();
 const client = new Client();
 const member = new Client();
 const cmd = new Client();
