@@ -11,7 +11,14 @@ let wCooldown = 3600000
 const consolestamp = require('console-stamp')(console, '[HH:MM:ss.l]');
 const {Client, Attachment} = require("discord.js");
 const bot = new Client();
-
+const client = new Client();
+const member = new Client();
+const cmd = new Client();
+const message = new Client();
+const bot = new Client({disableEveryone: false});
+const chat = new Client();
+const send = new Client();
+const createdAt = new Client();
 const footer = botname + " " + Bot_Version 
 const ms = require('ms');
 const fs = require('fs');
@@ -34,7 +41,7 @@ bot.on("message", async message => {
   let args = message.content.split(' ');
 
 if (cmd === prefix + "time"){	
-	let TimeEmbed = new Discord.RichEmbed()
+	let TimeEmbed = new RichEmbed()
    .setTimestamp()
    .setColor('#d53e3e')
 
@@ -53,7 +60,7 @@ if (cmd === prefix + "attachment"){
 }
 	
 if (cmd === prefix + "version"){	
-	let VersionEmbed = new Discord.RichEmbed()
+	let VersionEmbed = new RichEmbed()
    .setTitle(Bot_Version)
    .setColor('#d53e3e')
 
@@ -61,7 +68,7 @@ if (cmd === prefix + "version"){
 }
 
 if (cmd === prefix + "help"){	
-	let HelpEmbed = new Discord.RichEmbed()
+	let HelpEmbed = new RichEmbed()
    .setTitle('Help Menu - Commands')
    .setDescription("Prefix: `" + prefix + "`")
    .addField("General", "\n `help` (a list of commands) \n `wallet` (shows your current wealth) \n `work` (work for your job) \n `jobs` (a list of the jobs you can apply for) \n `slots` (use the slots machine) \n `daily` (claim your daily reward)", false)
@@ -87,7 +94,7 @@ if (cmd === prefix + "work"){
 	else {
 	if (uJob === "programmer"){
         let totalAmt = Math.floor(Math.random() * (860 - 550)) + 550
-	    let totalEmbed = new Discord.RichEmbed()
+	    let totalEmbed = new RichEmbed()
 	    .setFooter(footer)
 	    .setTitle("Pay Check!")
 		.setColor('#d53e3e')
@@ -108,7 +115,7 @@ if (cmd === prefix + "work"){
     }
 	if (uJob === "ssworker"){
 	    let totalAmt = Math.floor(Math.random() * (220 - 90)) + 90
-	    let totalEmbed = new Discord.RichEmbed()
+	    let totalEmbed = new RichEmbed()
 	    .setFooter(footer)
 	    .setTitle("Pay Check!")
 		.setColor('#d53e3e')
@@ -129,7 +136,7 @@ if (cmd === prefix + "work"){
 	}
     if (uJob === "mechanic"){
 		let totalAmt = Math.floor(Math.random() * (300 - 110)) + 110
-	    let totalEmbed = new Discord.RichEmbed()
+	    let totalEmbed = new RichEmbed()
 	    .setFooter(footer)
 	    .setTitle("Pay Check!")
 		.setColor('#d53e3e')
@@ -193,7 +200,7 @@ if (cmd === prefix + "jobs"){
     job: 0
    }
   }
-	let jobsA = new Discord.RichEmbed()
+	let jobsA = new RichEmbed()
 	.setFooter(footer)
 	.setTitle("Choose a job! Reply with name of the job!")
 	.setColor('#d53e3e')
@@ -274,7 +281,7 @@ if (cmd === prefix + "slots"){
         let aicon = message.author.displayAvatarURL;
 
         if (slots[result1] === slots[result2] && slots[result3]) {
-            let wEmbed = new Discord.RichEmbed()
+            let wEmbed = new RichEmbed()
                 .setFooter("You Won! + 500 Coins", aicon)
                 .setTitle(`:slot_machine: Slots :slot_machine:`)
                 .addField(`Result:`, slots[result1] + slots[result2] + slots[result3], true)
@@ -287,7 +294,7 @@ if (cmd === prefix + "slots"){
     });
             message.channel.send(wEmbed);
         } else {
-            let embed = new Discord.RichEmbed()
+            let embed = new RichEmbed()
                 .setFooter(`You Lost! - 200 coins`, aicon)
                 .setTitle(`:slot_machine: Slots :slot_machine:`)
                 .addField(`Result`, slots[result1] + slots[result2] + slots[result3], true)
@@ -310,7 +317,7 @@ if (cmd === prefix + "wallet"){
 	};
 	}
 	let uCoins = coins[message.author.id].coins;
-	let uCoinsEmbed = new Discord.RichEmbed()
+	let uCoinsEmbed = new RichEmbed()
    .addField(message.author.username + "'s Wallet",`${uCoins} Coins`)
    .setColor('#d53e3e')
    .setTimestamp()
