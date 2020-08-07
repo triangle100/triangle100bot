@@ -4,7 +4,7 @@ let prefix = "++"
 let botname = "Economee DEV"
 let W_message = true
 let Bot_A = "++help"
-let Bot_Version = "v0.1.35"
+let Bot_Version = "v0.1.41"
 let cooldown = 86400000
 let Dcoins = 500
 let wCooldown = 3600000
@@ -54,6 +54,7 @@ if (cmd === prefix + "time"){
 if (cmd === prefix + "attachment"){	
 	message.channel.send(message.author, attachment1)
 	message.channel.send(message.author, attachment2)
+	message.channel.send(message.author, attachment3)
 }
 	
 if (cmd === prefix + "version"){	
