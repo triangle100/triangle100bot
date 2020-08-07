@@ -4,7 +4,7 @@ let prefix = "++"
 let botname = "Economee DEV"
 let W_message = true
 let Bot_A = "++help"
-let Bot_Version = "v0.1.32"
+let Bot_Version = "v0.1.33"
 let cooldown = 86400000
 let Dcoins = 500
 let wCooldown = 3600000
@@ -45,6 +45,17 @@ if (cmd === prefix + "time"){
    .setColor('#d53e3e')
 
 	message.channel.send(TimeEmbed)
+}
+	
+if (cmd === prefix + "attachment"){	
+	let args = message.content.substring(PREFIX.length).split(" ");
+	
+	switch(args[0]){
+		case 'send':
+			const attachment = new Attachment('https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png')
+			message.channel.send(message.author, attachment);
+		break;
+	}
 }
 	
 if (cmd === prefix + "version"){	
