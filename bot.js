@@ -45,10 +45,11 @@ bot.on("message", async message => {
 
 if (cmd === prefix + "profile"){
 	let TimeEmbed = new Discord.RichEmbed()
+	.setDescription("This bot is in `Hello ${message.author}!` guild(s)")
    .setTimestamp()
    .setColor('#d53e3e')
 
-	message.channel.send(`Hello {message.author}!`)
+	message.channel.send()
 }
 
 if (cmd === prefix + "time"){	
