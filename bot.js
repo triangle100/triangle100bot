@@ -47,8 +47,8 @@ bot.on("message", async message => {
 if (cmd === prefix + "profile"){
 	let ProfileEmbed = new Discord.RichEmbed()
 	.setTitle("Profile")
-   .addField("Name: " + message.author)
-   .addField("Bot Permissions: " + rank)
+   .addField("Name:", message.author, false)
+   .addField("Bot Permissions:", rank, true)
    .setTimestamp()
    .setColor('#d53e3e')
 
