@@ -43,14 +43,7 @@ bot.on("message", async message => {
   const attachment2 = new Attachment('./img/favicon+.png')
   const attachment3 = new Attachment('./img/economee.png')
 
-if (cmd === prefix + "profile"){
-	.setDescription("This bot is in " + message.member.user.tag + " guild(s)")
-	let TimeEmbed = new Discord.RichEmbed()
-   .setTimestamp()
-   .setColor('#d53e3e')
 
-	message.channel.send(TimeEmbed)
-}
 
 if (cmd === prefix + "time"){	
 	let TimeEmbed = new Discord.RichEmbed()
