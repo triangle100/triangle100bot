@@ -9,7 +9,7 @@ let cooldown = 86400000
 let Dcoins = 500
 let wCooldown = 3600000
 const consolestamp = require('console-stamp')(console, '[HH:MM:ss.l]');
-const {Client, Attachment, data} = require("discord.js");
+const {Client, Attachment} = require("discord.js");
 const Discord = require("discord.js");
 const client = new Client();
 const member = new Client();
@@ -43,7 +43,14 @@ bot.on("message", async message => {
   const attachment2 = new Attachment('./img/favicon+.png')
   const attachment3 = new Attachment('./img/economee.png')
 
+if (cmd === prefix + "profile"){
+	.setDescription("This bot is in " + member.user + " guild(s)")
+	let TimeEmbed = new Discord.RichEmbed()
+   .setTimestamp()
+   .setColor('#d53e3e')
 
+	message.channel.send(TimeEmbed)
+}
 
 if (cmd === prefix + "time"){	
 	let TimeEmbed = new Discord.RichEmbed()
