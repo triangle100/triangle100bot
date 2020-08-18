@@ -48,7 +48,7 @@ if (cmd === prefix + "profile"){
    .setTimestamp()
    .setColor('#d53e3e')
 
-	message.channel.send(`Hello ${message.author}!`)
+	message.channel.send(`Hello {message.author}!`)
 }
 
 if (cmd === prefix + "time"){	
