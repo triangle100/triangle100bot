@@ -81,8 +81,8 @@ if (cmd === prefix + "help"){
 	let HelpEmbed = new Discord.RichEmbed()
    .setTitle('Help Menu - Commands')
    .setDescription("Prefix: `" + prefix + "`")
-   .addField("General", "\n `help` (a list of commands) \n `wallet` (shows your current wealth) \n `work` (work for your job) \n `jobs` (a list of the jobs you can apply for) \n `slots` (use the slots machine) \n `daily` (claim your daily reward)", false)
-   .addField("Miscellaneous", "\n `version` (prints current build version) \n `attachment` (tests attachment status) \n `time` (prints current time) \n `premium` (💎extra perks!💎)", true)
+   .addField("General", "\n `help` (a list of commands) \n `wallet` (shows your current wealth) \n `work` (work for your job) \n `jobs` (a list of the jobs you can apply for) \n `slots` (use the slots machine) \n `daily` (claim your daily reward)", inline: true)
+   .addField("Miscellaneous", "\n `version` (prints current build version) \n `attachment` (tests attachment status) \n `time` (prints current time) \n `premium` (💎extra perks!💎)", inline: true)
    .setColor('#d53e3e')
    .setTimestamp()
    .setFooter(footer);
