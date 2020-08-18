@@ -1,6 +1,7 @@
 require('console-stamp')(console, '[HH:MM:ss]');
 let servername = "Economee Support"
 let prefix = "++"
+let rank = "TEMP RANK"
 let botname = "Economee DEV"
 let W_message = true
 let Bot_A = "++help"
