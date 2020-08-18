@@ -45,7 +45,7 @@ bot.on("message", async message => {
 
 if (cmd === prefix + "profile"){
 	let ProfileEmbed = new Discord.RichEmbed()
-	.setDescription("This bot is in `Hello ${message.author}!` guild(s)")
+	.setDescription("This bot is in ${message.author} guild(s)")
    .setTimestamp()
    .setColor('#d53e3e')
 
