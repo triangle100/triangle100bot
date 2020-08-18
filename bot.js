@@ -44,12 +44,12 @@ bot.on("message", async message => {
   const attachment3 = new Attachment('./img/economee.png')
 
 if (cmd === prefix + "profile"){
-	.setDescription("This bot is in " + bot.member.user + " guild(s)")
+	.setDescription("This bot is in " + " guild(s)")
 	let TimeEmbed = new Discord.RichEmbed()
    .setTimestamp()
    .setColor('#d53e3e')
 
-	message.channel.send(TimeEmbed)
+	message.channel.send(`Hello ${message.author}!`)
 }
 
 if (cmd === prefix + "time"){	
