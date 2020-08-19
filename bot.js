@@ -1,7 +1,7 @@
 require('console-stamp')(console, '[HH:MM:ss]');
 let servername = "Economee Support"
 let prefix = "++"
-let permissions = "TEMP PERMS"
+let rank = "TEMP PERMS"
 let botname = "Economee DEV"
 let W_message = true
 let Bot_A = "++help"
@@ -48,7 +48,7 @@ if (cmd === prefix + "profile"){
 	let ProfileEmbed = new Discord.RichEmbed()
 	.setTitle("Profile")
    .addField("Name", message.author, true)
-   .addField("Bot Permissions", permissions, true)
+   .addField("Economee rank", rank, true)
    .setTimestamp()
    .setColor('#d53e3e')
 
