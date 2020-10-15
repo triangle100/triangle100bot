@@ -1,7 +1,7 @@
 {
-  "name": "economeedevjs",
+  "name": "triangle100bot",
   "version": "1.0.0",
-  "description": "basic economy bot",
+  "description": "null",
   "main": "bot.js",
   "dependencies": {
     "console-stamp": "^0.2.9",
