@@ -83,5 +83,7 @@ if (cmd === prefix + "premium"){
 	message.channel.send("💎Support triangle100 and buy PREMIUM for extra commands and features!💎")
 	message.channel.send("https://www.patreon.com/economee")
 }
-	
+
+}
+
 bot.login(process.env.TOKEN);
