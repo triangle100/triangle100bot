@@ -32,6 +32,7 @@ bot.on("message", async message => {
   const attachment1 = new Attachment('./img/gradient1.png')
   const attachment2 = new Attachment('./img/favicon+.png')
   const attachment3 = new Attachment('./img/economee.png')
+}
 
 if (cmd === prefix + "profile"){
 	let ProfileEmbed = new Discord.RichEmbed()
@@ -82,8 +83,6 @@ if (cmd === prefix + "help"){
 if (cmd === prefix + "premium"){	
 	message.channel.send("💎Support triangle100 and buy PREMIUM for extra commands and features!💎")
 	message.channel.send("https://www.patreon.com/economee")
-}
-
 }
 
 bot.login(process.env.TOKEN);
