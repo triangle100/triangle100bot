@@ -1,2 +1,2 @@
-# triangle100
+# triangle100bot
 This project is licensed under the terms of the MIT license.
