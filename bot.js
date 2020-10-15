@@ -35,7 +35,7 @@ if (cmd === prefix + "profile"){
 	let ProfileEmbed = new Discord.RichEmbed()
 	.setTitle("Profile")
    .addField("Name", message.author, true)
-   .addField("Economee rank", rank, true)
+   .addField("triangle100 rank", rank, true)
    .setTimestamp()
    .setColor('#d53e3e')
 
@@ -77,7 +77,7 @@ if (cmd === prefix + "help"){
 
 if (cmd === prefix + "premium"){	
 	message.channel.send("💎Support triangle100 and buy PREMIUM for extra commands and features!💎")
-	message.channel.send("https://www.patreon.com/economee")
+	message.channel.send("https://www.patreon.com/triangle100")
 }
 });
 
