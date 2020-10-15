@@ -29,9 +29,7 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = message.content.substring(prefix.length).split(" ");
-  const attachment1 = new Attachment('./img/gradient1.png')
-  const attachment2 = new Attachment('./img/favicon+.png')
-  const attachment3 = new Attachment('./img/economee.png')
+  const attachment1 = new Attachment('./img/icon.png')
 
 if (cmd === prefix + "profile"){
 	let ProfileEmbed = new Discord.RichEmbed()
@@ -54,8 +52,6 @@ if (cmd === prefix + "time"){
 	
 if (cmd === prefix + "attachment"){	
 	message.channel.send(message.author, attachment1)
-	message.channel.send(message.author, attachment2)
-	message.channel.send(message.author, attachment3)
 }
 	
 if (cmd === prefix + "version"){	
