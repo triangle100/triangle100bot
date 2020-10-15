@@ -45,7 +45,7 @@ if (cmd === prefix + "profile"){
    .addField("Name", message.author, true)
    .addField("triangle100 rank", rank, true)
    .setTimestamp()
-   .setColor('#d53e3e')
+   .setColor('#0099ff')
 
 	message.channel.send(ProfileEmbed)
 }
@@ -53,7 +53,7 @@ if (cmd === prefix + "profile"){
 if (cmd === prefix + "time"){	
 	let TimeEmbed = new Discord.RichEmbed()
    .setTimestamp()
-   .setColor('#d53e3e')
+   .setColor('#0099ff')
 
 	message.channel.send(TimeEmbed)
 }
@@ -65,28 +65,28 @@ if (cmd === prefix + "attachment"){
 if (cmd === prefix + "version"){	
 	let VersionEmbed = new Discord.RichEmbed()
    .setTitle(Bot_Version)
-   .setColor('#d53e3e')
+   .setColor('#0099ff')
 
 	message.channel.send(VersionEmbed)
-}
-
-if (cmd === prefix + "help"){	
-	let HelpEmbed = new Discord.RichEmbed()
-   .setTitle('Help Menu - Commands')
-   .setDescription("Prefix: `" + prefix + "`")
-   .addField("General", "\n `help` (a list of commands) \n `wallet` (shows your current wealth) \n `work` (work for your job) \n `jobs` (a list of the jobs you can apply for) \n `slots` (use the slots machine) \n `daily` (claim your daily reward)", false)
-   .addField("Miscellaneous", "\n `version` (prints current build version) \n `attachment` (tests attachment status) \n `time` (prints current time) \n `premium` (💎extra perks!💎)", true)
-   .setColor('#d53e3e')
-   .setTimestamp()
-   .setFooter(footer);
-
-	message.channel.send(HelpEmbed)
 }
 
 if (cmd === prefix + "premium"){	
 	message.channel.send("💎Support triangle100 and buy PREMIUM for extra commands and features!💎")
 	message.channel.send("https://www.patreon.com/triangle100")
 }
-});
 
+if (cmd === prefix + "help"){	
+	let HelpEmbed = new Discord.RichEmbed()
+   .setTitle('Help Menu - Commands')
+   .setDescription("Prefix: `" + prefix + "`")
+   .addField("General", "\n `help` (a list of useable commands)", false)
+   .addField("Miscellaneous", "\n `version` (prints current build version) \n `attachment` (tests attachment status) \n `time` (prints current time) \n `premium` (💎extra perks!💎)", true)
+   .setColor('#0099ff')
+   .setTimestamp()
+   .setFooter(footer);
+
+	message.channel.send(HelpEmbed)
+}
+
+});
 bot.login(process.env.TOKEN);
